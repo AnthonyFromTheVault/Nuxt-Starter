@@ -1,0 +1,11 @@
+.bundle
+.cache
+.DS_Store
+build/
+node_modules/
+.tmp/
+*.lock
+Gemfile.lock
+package-lock.json
+.sass-cache
+.nuxt/

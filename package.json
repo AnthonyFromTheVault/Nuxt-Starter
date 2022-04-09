@@ -1,0 +1,26 @@
+{
+  "name": "nuxt-starter",
+  "version": "1.0.0",
+  "description": "Starter repo for Nuxt website",
+  "author": "Vault Labs, LLC",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt -o",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate"
+  },
+  "dependencies": {
+    "@nuxtjs/google-analytics": "^2.3.0",
+    "@nuxtjs/sitemap": "^2.3.0",
+    "nuxt": "^2.15.8"
+  },
+  "devDependencies": {
+    "eslint-config-prettier": "^6.10.0",
+    "eslint-plugin-prettier": "^3.1.2",
+    "node-sass": "^4.14.1",
+    "prettier": "^1.19.1",
+    "sass-loader": "^8.0.2",
+    "vue-waypoint": "^3.4.1"
+  }
+}
