@@ -1,0 +1,133 @@
+// ----------------------
+// Media Breakpoints
+
+$mobile-tiny: 375px; // iPhone "normal"
+$mobile-only: 449px;
+$mobile-landscape-width: 450px;
+$tablet-width: 768px;
+$desktop-width: 992px;
+$desktop-xl-width: 1300px;
+$desktop-xxl-width: 1800px;
+
+@mixin mobile-tiny {
+  @media (min-width: #{$mobile-tiny}) {
+    @content;
+  }
+}
+
+@mixin mobile-only {
+  @media (max-width: #{$mobile-only}) {
+    @content;
+  }
+}
+
+@mixin mobile-landscape {
+  @media (min-width: #{$mobile-landscape-width}) {
+    @content;
+  }
+}
+
+@mixin mobile-landscape {
+  @media (min-width: #{$mobile-landscape-width}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: #{$tablet-width}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: #{$desktop-width}) {
+    @content;
+  }
+}
+
+@mixin desktop-xl {
+  @media (min-width: #{$desktop-xl-width}) {
+    @content;
+  }
+}
+
+@mixin desktop-xxl {
+  @media (min-width: #{$desktop-xxl-width}) {
+    @content;
+  }
+}
+
+@mixin short-desktop {
+  @media (max-height: 740px) {
+    @content;
+  }
+}
+
+// ----------------------
+// Animation
+
+@mixin keyframes($animation-name) {
+  @-webkit-keyframes #{$animation-name} {
+    @content;
+  }
+  @-moz-keyframes #{$animation-name} {
+    @content;
+  }
+  @-ms-keyframes #{$animation-name} {
+    @content;
+  }
+  @-o-keyframes #{$animation-name} {
+    @content;
+  }
+  @keyframes #{$animation-name} {
+    @content;
+  }
+}
+
+@mixin animation($str) {
+  -webkit-animation: #{$str};
+  -moz-animation: #{$str};
+  -ms-animation: #{$str};
+  -o-animation: #{$str};
+  animation: #{$str};
+}
+
+@mixin transition($args...) {
+  -webkit-transition: $args;
+  -moz-transition: $args;
+  -ms-transition: $args;
+  -o-transition: $args;
+  transition: $args;
+}
+
+@mixin translate($trns...) {
+  -webkit-translate: $trns;
+  -moz-translate: $trns;
+  -ms-translate: $trns;
+  -o-translate: $trns;
+  translate: $trns;
+}
+
+@mixin animation-fill-mode($amode) {
+  -webkit-animation-fill-mode: #{$amode};
+  -moz-animation-fill-mode: #{$amode};
+  -ms-animation-fill-mode: #{$amode};
+  -o-animation-fill-mode: #{$amode};
+  animation-fill-mode: #{$amode};
+}
+
+@mixin animation-duration($adur) {
+  -webkit-animation-duration: #{$adur};
+  -moz-animation-duration: #{$adur};
+  -ms-animation-duration: #{$adur};
+  -o-animation-duration: #{$adur};
+  animation-duration: #{$adur};
+}
+
+@mixin animation-delay($adel) {
+  -webkit-animation-delay: #{$adel};
+  -moz-animation-delay: #{$adel};
+  -ms-animation-delay: #{$adel};
+  -o-animation-delay: #{$adel};
+  animation-delay: #{$adel};
+}

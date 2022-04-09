@@ -1,0 +1,119 @@
+@import "./_mixins.scss";
+
+// ----------------------
+// Colors
+$color__blue: #2c8ad8;
+$color__blue--50: rgba(#2c8ad8, 0.3);
+$color__primary: $color__blue;
+$color__primary: $color__blue;
+
+$color__success: #417505;
+$color__warning: #f5a623;
+$color__error: #b3081c;
+
+$color__black--100: rgba(0, 0, 0, 1);
+$color__black--70: rgba(0, 0, 0, 0.7);
+$color__black--60: rgba(0, 0, 0, 0.6);
+$color__black--50: rgba(0, 0, 0, 0.5);
+$color__black--30: rgba(0, 0, 0, 0.3);
+$color__black--20: rgba(0, 0, 0, 0.2);
+$color__black--10: rgba(0, 0, 0, 0.1);
+$color__black--5: rgba(0, 0, 0, 0.05);
+$color__white--100: rgba(255, 255, 255, 1);
+$color__white--70: rgba(255, 255, 255, 0.7);
+$color__white--60: rgba(255, 255, 255, 0.6);
+$color__white--50: rgba(255, 255, 255, 0.5);
+$color__white--30: rgba(255, 255, 255, 0.3);
+$color__white--20: rgba(255, 255, 255, 0.2);
+$color__white--10: rgba(255, 255, 255, 0.1);
+$color__white--5: rgba(255, 255, 255, 0.05);
+$color__white: #ffffff;
+$color__gray--1: #4a4a4a;
+$color__gray--2: #9f9f9f;
+$color__gray--3: #ddd;
+$color__black: #2e2e2e;
+$color__black--text: $color__black;
+
+$color__overlay-black: rgba(0, 0, 0, 0.05);
+
+$color__bg: $color__gray--1;
+
+$color__link: $color__blue;
+$color__link--hover: darken($color__blue, 15%);
+
+// ----------------------
+// Fonts
+$font__source-sans: "Source Sans Pro", sans-serif;
+$font__primary: $font__source-sans;
+
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700,900");
+
+// ----------------------
+// Animations
+
+$a__ease-150: all 150ms ease;
+$a__ease-180: all 180ms ease;
+$a__ease-230: all 230ms ease;
+$a__ease-1s: all 1s ease;
+$a__bezier: all 180ms cubic-bezier(0.25, 0.17, 0.2, 1);
+$a__bezier-grow: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+
+$a__ease: $a__ease-180;
+$a__bga: background-color 400ms ease;
+
+@mixin animateBezier($prop) {
+  transition: #{$prop} 280ms cubic-bezier(0.25, 0.17, 0.2, 1);
+}
+
+// ----------------------
+// Old Animations
+// ----------------------
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+.fadeIn {
+  @include animation-duration(1s);
+}
+
+.fadeOut {
+  @include animation-duration(1s);
+}
+
+.fade-in {
+  opacity: 0;
+  @include animation(fadeIn ease 1);
+  @include animation-fill-mode(forwards);
+  @include animation-duration(180ms);
+}
+
+.fadeInFast {
+  opacity: 0;
+  @include animation(fadeIn ease);
+  @include animation-fill-mode(forwards);
+  @include animation-duration(180ms);
+}
+.fadeOutFast {
+  opacity: 1;
+  @include animation(fadeOut ease);
+  @include animation-fill-mode(forwards);
+  @include animation-duration(180ms);
+}
+
+// Animation delays
+.delay--1 {
+  @include animation-delay(0.3s);
+}
